@@ -58,7 +58,7 @@ library
                      , deepseq
                      , exceptions
                      , fmt
-                     , formatting >= 6.2.0 && < 6.3
+                     , formatting >= 6.3.4
                      , hashable >= 1.2.4.0
                      , microlens
                      , microlens-mtl
@@ -71,7 +71,6 @@ library
                      , scientific
                      , template-haskell
                      , text
-                     , text-format
                      , th-lift-instances
                      , transformers
                      , universum ^>= 1.1.0
