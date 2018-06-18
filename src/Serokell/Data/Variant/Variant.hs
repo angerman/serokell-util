@@ -12,7 +12,7 @@ module Serokell.Data.Variant.Variant
 
 import Universum
 
-import Formatting.Buildable (build)
+import Formatting.Buildable (Buildable(..))
 import GHC.Exts (IsList (..))
 
 import Serokell.Util.Text (listBuilderJSONIndent, mapBuilder)
