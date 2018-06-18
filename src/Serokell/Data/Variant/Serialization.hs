@@ -13,6 +13,7 @@ import Data.Scientific (floatingOrInteger)
 
 import Serokell.Data.Variant.Variant (VarMap, Variant (..))
 import Serokell.Util.Base64 (JsonByteString (JsonByteString))
+import Formatting.Buildable (Buildable(..))
 
 import qualified Data.Aeson as Aeson
 import qualified Data.HashMap.Strict as HM
