@@ -17,7 +17,7 @@ import Universum
 import Formatting (bprint, stext, string, (%))
 
 import qualified Control.Monad as Monad
-import qualified Formatting.Buildable
+import           Formatting.Buildable
 
 instance Buildable SomeException where
     build e =
