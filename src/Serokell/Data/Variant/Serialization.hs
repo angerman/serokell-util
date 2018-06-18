@@ -32,7 +32,7 @@ import qualified Data.HashMap.Strict as HM
 --    result type depends on sign (negative ⇒ Int, otherwise UInt).
 
 varMapToObject :: VarMap -> Aeson.Object
-varMapToObject = HM.fromList . map (bimap pretty Aeson.toJSON) . toPairs
+varMapToObject = HM.fromList . map (bimap build Aeson.toJSON) . toPairs
 
 instance Aeson.ToJSON Variant where
     toJSON VarNone       = Aeson.Null
