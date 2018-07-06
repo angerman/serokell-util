@@ -15,9 +15,6 @@ import Serokell.Data.Variant.Variant (VarMap, Variant (..))
 import Serokell.Util.Base64 (JsonByteString (JsonByteString))
 import Formatting.Buildable (Buildable(..))
 
-import Data.Text.Lazy.Builder (toLazyText)
-import Data.Text.Lazy         (toStrict)
-
 import qualified Data.Aeson as Aeson
 import qualified Data.HashMap.Strict as HM
 
@@ -36,7 +33,7 @@ import qualified Data.HashMap.Strict as HM
 --    result type depends on sign (negative ⇒ Int, otherwise UInt).
 
 varMapToObject :: VarMap -> Aeson.Object
-varMapToObject = HM.fromList . map (bimap (toStrict . toLazyText . build) Aeson.toJSON) . toPairs
+varMapToObject = HM.fromList . map (bimap build Aeson.toJSON) . toPairs
 
 instance Aeson.ToJSON Variant where
     toJSON VarNone       = Aeson.Null
